@@ -1,6 +1,7 @@
 package com.msec.grpc;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -13,11 +14,10 @@ import io.grpc.stub.StreamObserver;
 
 public class TutorialServer {
 	private static final Logger logger = Logger.getLogger(TutorialServer.class.getName());
-	
+	private static HashMap<String, User> users;
 	private final int port;
 	private final Server server;
-	
-	static ArrayList<Calculation> history;
+
 	
 	public TutorialServer(int port) throws IOException {
 		this(ServerBuilder.forPort(port), port);
@@ -25,9 +25,9 @@ public class TutorialServer {
 	
 	public TutorialServer(ServerBuilder<?> serverBuilder, int port){
 		this.port = port;
-		if(history == null)
-			history = new ArrayList<Calculation>();
-		server = serverBuilder.addService(new CalculatorService()).build();
+		if(users == null)
+			users = new HashMap<String, User>();
+		server = serverBuilder.addService(new ChatService()).build();
 	}
 	
 	public void start() throws IOException{
@@ -67,70 +67,45 @@ public class TutorialServer {
 
 	}
 	
-	private static class CalculatorService extends CalculatorGrpc.CalculatorImplBase {
+	private static class ChatService extends ChatGrpc.ChatImplBase {
 
 		@Override
-		public void calculateSum(Sum request, StreamObserver<CalculatorReply> responseObserver){
-			responseObserver.onNext(sum(request));
-			responseObserver.onCompleted();
+		public void sendMessage(Bericht bericht){
+			String zender= bericht.getZender();
+
+            for (User user : users.values()) {
+                if(!user.getNaam().equals(zender)){
+                    user.addToInbox(bericht);
+                }
+            }
+
+
 		}
-		
+
 		@Override
-		public StreamObserver<Sum> streamingSum(final StreamObserver<CalculatorReply> responseObserver){
-			return new StreamObserver<Sum>() {
-				int sumCount;
-				CalculatorReply tempSolution;
-				
-				@Override
-				public void onNext(Sum sum){
-					if(sumCount == 0)
-						tempSolution = sum(sum);
-					else
-						tempSolution = sum(sum, tempSolution);
-						
-					sumCount++;
-				}
-				
-				@Override
-				public void onError(Throwable t){
-					logger.log(Level.WARNING, "Encountered error in StreamingSum", t);
-				}
-				
-				@Override
-				public void onCompleted() {
-					responseObserver.onNext(tempSolution);
-					responseObserver.onCompleted();
-				}
-			};
-		}
+        public RegistratieResponse register(Registratie registratie){
+
+            if(!users.containsKey(registratie.getNaam())) {
+                users.put(registratie.getNaam(), new User(registratie.getNaam()));
+                return RegistratieResponse.newBuilder().setBevestiging(true).build();
+            }
+            else{
+                return RegistratieResponse.newBuilder().setBevestiging(false).build();
+            }
+
+        }
+
+        @Override
+        public void receiveMessages(ChatClient ontvanger, StreamObserver<Bericht> streamObserver){
+		    User ontvangerUser= users.get(ontvanger.getNaam());
+            for (Bericht inbox : ontvangerUser.getInbox()) {
+                streamObserver.onNext(inbox);
+            }
+            streamObserver.onCompleted();
+        }
+
 		
-		@Override
-		public void calculatorHistory(Empty nul, StreamObserver<Calculation> responseObserver){
-			for(int i = 0; i < history.size(); i++){
-				responseObserver.onNext(history.get(i));
-			}
-			
-			responseObserver.onCompleted();
-		}
-		
-		private CalculatorReply sum(Sum request){
-			CalculatorReply reply = CalculatorReply.newBuilder().setSolution(request.getA() + request.getB()).build();
-			history.add(Calculation.newBuilder().setSum(request).setSolution(reply).setIndex(history.size()).build());
-			
-			return reply;
-		}
-		
-		private CalculatorReply sum(Sum request, CalculatorReply extra){
-			CalculatorReply reply;
-			Sum newSum;
-			
-			reply = sum(request);
-			newSum = Sum.newBuilder().setA(reply.getSolution()).setB(extra.getSolution()).build();
-			
-			reply = sum(newSum);
-			
-			return reply;
-		}
+
 	}
 
 }

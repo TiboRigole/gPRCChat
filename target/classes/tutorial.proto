@@ -37,33 +37,34 @@ option objc_class_prefix = "HLW";
 package tutorial;
 
 // De calculator service definitie
-service Calculator{
-  // Bereken een som
-  rpc calculateSum(Sum) returns (CalculatorReply) {}
-  
-  // Doe een som met onbepaalde input
-  rpc streamingSum(stream Sum) returns (CalculatorReply) {}
-  
-  // Vraag de uitgevoerde berekeningen op
-  rpc calculatorHistory(Empty) returns (stream Calculation) {}
+service Chat{
+
+  // send message naar server
+  rpc sendMessage(Bericht) returns (Empty) {}
+
+  rpc register(Registratie) returns (RegistratieResponse){}
+
+  // Vraag niet gekregen messages op
+  rpc receiveMessages(ChatClient) returns (stream Bericht) {}
+
 }
 
 // De aanvraag voor een som
-message Sum{
-  int32 a = 1;
-  int32 b = 2;
+message Bericht{
+  string message=1;
+  string zender=2;
 }
 
-// Het antwoord met de oplossing in
-message CalculatorReply{
-  int32 solution = 1;
+message ChatClient{
+    string naam=1;
 }
 
-// Een volledige berekening voor eenvoudige sommen
-message Calculation{
-  int32 index = 1;
-  Sum sum = 2;
-  CalculatorReply solution = 3;
+message Registratie{
+  string naam=1;
+}
+
+message RegistratieResponse{
+  bool bevestiging=1;
 }
 
 // Een leeg veld
