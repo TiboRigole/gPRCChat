@@ -82,20 +82,21 @@ public class TutorialServer {
             streamObserver.onNext(Empty.newBuilder().build());
             streamObserver.onCompleted();
 
-            notifyAll();
 		}
 
 		@Override
         public void register(Registratie registratie, StreamObserver<RegistratieResponse> streamObserver){
             System.out.println("er wordt geregistreerd");
             System.out.println(registratie.getNaam());
-            if(users.containsKey(registratie.getNaam())) {
+
+            if(!users.containsKey(registratie.getNaam())) {
+                System.out.println("user bestaat nog niet");
                 users.put(registratie.getNaam(), new User(registratie.getNaam()));
-                streamObserver.onNext(RegistratieResponse.newBuilder().setBevestiging(true).getDefaultInstanceForType());
+                streamObserver.onNext(RegistratieResponse.newBuilder().setBevestiging(true).build());
                 streamObserver.onCompleted();
             }
             else{
-                streamObserver.onNext(RegistratieResponse.newBuilder().setBevestiging(false).getDefaultInstanceForType());
+                streamObserver.onNext(RegistratieResponse.newBuilder().setBevestiging(false).build());
                 streamObserver.onCompleted();
             }
 

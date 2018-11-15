@@ -51,8 +51,8 @@ service Chat{
 
 // De aanvraag voor een som
 message Bericht{
-  string message=1;
-  string zender=2;
+      string message=1;
+      string zender=2;
 }
 
 message ChatClient{
@@ -60,11 +60,11 @@ message ChatClient{
 }
 
 message Registratie{
-  string naam=1;
+    string naam=1;
 }
 
 message RegistratieResponse{
-  bool bevestiging=1;
+    bool bevestiging=1;
 }
 
 // Een leeg veld

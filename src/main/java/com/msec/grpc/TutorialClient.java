@@ -75,6 +75,7 @@ public class TutorialClient {
 
 	public void register(String naam){
 	    RegistratieResponse regResponse=blockingStub.register(Registratie.newBuilder().setNaam(naam).build());
+        System.out.println(regResponse.getBevestiging());
 	    if(regResponse.getBevestiging()){
 	        info("Registratie succes");
         }
