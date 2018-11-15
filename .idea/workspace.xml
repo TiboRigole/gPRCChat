@@ -2,65 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1053e3e2-d200-4c9f-81ab-05b1eacd5a16" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/msec/grpc/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/msec/grpc/ReceiveThread.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/proto/tutorial.proto" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/proto/tutorial.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/Calculation$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/Calculation$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/Calculation.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculationOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorGrpc$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorGrpc$CalculatorBlockingStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorGrpc$CalculatorFutureStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorGrpc$CalculatorImplBase.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorGrpc$CalculatorStub.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorGrpc$MethodHandlers.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorGrpc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorReply$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorReply$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorReply.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/CalculatorReplyOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/Empty$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/Empty$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/Empty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/EmptyOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/Sum$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/Sum$Builder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/Sum.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/SumOrBuilder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/TutorialClient$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/TutorialClient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/TutorialProto$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/TutorialProto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/TutorialServer$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/TutorialServer$CalculatorService$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/TutorialServer$CalculatorService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/msec/grpc/TutorialServer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tutorial.proto" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/tutorial.proto" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/msec/grpc/CalculatorGrpc.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/Calculation.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/CalculationOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/CalculatorReply.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/CalculatorReplyOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/Empty.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/Empty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/EmptyOrBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/EmptyOrBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/Sum.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/SumOrBuilder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/TutorialProto.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/protobuf/java/com/msec/grpc/TutorialProto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/any.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/api.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/compiler/plugin.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/descriptor.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/duration.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/empty.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/field_mask.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/source_context.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/struct.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/timestamp.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/type.proto" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/protoc-dependencies/fbc046288653672aab898e42ce451086/google/protobuf/wrappers.proto" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -116,7 +61,7 @@
         <counts>
           <entry key="gitignore" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="2" />
+          <entry key="java" value="6" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -124,24 +69,28 @@
         <counts>
           <entry key="Git file" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="2" />
+          <entry key="JAVA" value="6" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="959" />
+          <entry key="java" value="2408" />
           <entry key="proto" value="565" />
-          <entry key="txt" value="12" />
+          <entry key="txt" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="959" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="JAVA" value="2408" />
+          <entry key="PLAIN_TEXT" value="26" />
           <entry key="PROTO" value="565" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.spring.boot.run.usages" />
+      <usages-collector id="statistics.spring.boot.mvc.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
@@ -149,12 +98,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialClient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+            <state relative-caret-position="131">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
               <folding>
                 <element signature="e#816#817#0" expanded="true" />
                 <element signature="e#892#893#0" expanded="true" />
+                <element signature="e#4149#4150#0" expanded="true" />
+                <element signature="e#4191#4192#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/msec/grpc/ReceiveThread.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -162,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/proto/tutorial.proto">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+            <state relative-caret-position="238">
+              <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -181,8 +141,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="100" column="12" lean-forward="true" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+            <state relative-caret-position="623">
+              <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
               <folding>
                 <element signature="e#963#1322#0" expanded="true" />
                 <element signature="e#1321#1322#0" expanded="true" />
@@ -233,6 +193,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>receiveMessage</find>
+      <find>receiveMessages</find>
+      <find>sendMessage</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -243,6 +210,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/msec/grpc/User.java" />
         <option value="$PROJECT_DIR$/src/main/proto/tutorial.proto" />
+        <option value="$PROJECT_DIR$/src/main/java/com/msec/grpc/ReceiveThread.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialServer.java" />
       </list>
     </option>
@@ -340,6 +309,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="proto" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="gRPCChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gRPCChat" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gRPCChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gRPCChat" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gRPCChat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gRPCChat" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
+              <item name="protobuf" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -350,7 +337,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542292708339" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542295004928" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -421,7 +408,7 @@
       <updated>1542282973416</updated>
       <workItem from="1542282979982" duration="489000" />
       <workItem from="1542283538449" duration="1681000" />
-      <workItem from="1542291075947" duration="1627000" />
+      <workItem from="1542291075947" duration="3729000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1542291163594</created>
@@ -430,17 +417,24 @@
       <option name="project" value="LOCAL" />
       <updated>1542291163594</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Server ok">
+      <created>1542292875093</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1542292875093</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3797000" />
+    <option name="totallyTimeSpent" value="5899000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25586355" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -449,7 +443,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.12903225" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4474249" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -459,7 +453,7 @@
       <window_info anchor="bottom" id="Statistic" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.32832617" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32832617" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -479,7 +473,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
+    <MESSAGE value="Server ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Server ok" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$MAVEN_REPOSITORY$/io/grpc/grpc-stub/1.0.1/grpc-stub-1.0.1.jar!/io/grpc/stub/StreamObserver.class">
@@ -532,28 +527,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialClient.java">
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/protobuf/grpc-java/com/msec/grpc/ChatGrpc.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding>
-            <element signature="e#816#817#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="200">
+          <caret line="234" selection-start-line="234" selection-end-line="234" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/proto/tutorial.proto">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        <state relative-caret-position="238">
+          <caret line="44" column="44" selection-start-line="44" selection-start-column="44" selection-end-line="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#4149#4150#0" expanded="true" />
+            <element signature="e#4191#4192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/msec/grpc/ReceiveThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/msec/grpc/TutorialServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="100" column="12" lean-forward="true" selection-start-line="100" selection-start-column="12" selection-end-line="100" selection-end-column="12" />
+        <state relative-caret-position="623">
+          <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
           <folding>
             <element signature="e#963#1322#0" expanded="true" />
             <element signature="e#1321#1322#0" expanded="true" />

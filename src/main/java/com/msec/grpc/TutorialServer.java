@@ -14,7 +14,7 @@ import io.grpc.stub.StreamObserver;
 
 public class TutorialServer {
 	private static final Logger logger = Logger.getLogger(TutorialServer.class.getName());
-	private static HashMap<String, User> users;
+	private static HashMap<String, User> users=new HashMap<String, User>();
 	private final int port;
 	private final Server server;
 
@@ -70,7 +70,7 @@ public class TutorialServer {
 	private static class ChatService extends ChatGrpc.ChatImplBase {
 
 		@Override
-		public void sendMessage(Bericht bericht){
+		public void sendMessage(Bericht bericht, StreamObserver<Empty> streamObserver){
 			String zender= bericht.getZender();
 
             for (User user : users.values()) {
@@ -79,25 +79,39 @@ public class TutorialServer {
                 }
             }
 
+            streamObserver.onNext(Empty.newBuilder().build());
+            streamObserver.onCompleted();
 
+            notifyAll();
 		}
 
 		@Override
-        public RegistratieResponse register(Registratie registratie){
-
-            if(!users.containsKey(registratie.getNaam())) {
+        public void register(Registratie registratie, StreamObserver<RegistratieResponse> streamObserver){
+            System.out.println("er wordt geregistreerd");
+            System.out.println(registratie.getNaam());
+            if(users.containsKey(registratie.getNaam())) {
                 users.put(registratie.getNaam(), new User(registratie.getNaam()));
-                return RegistratieResponse.newBuilder().setBevestiging(true).build();
+                streamObserver.onNext(RegistratieResponse.newBuilder().setBevestiging(true).getDefaultInstanceForType());
+                streamObserver.onCompleted();
             }
             else{
-                return RegistratieResponse.newBuilder().setBevestiging(false).build();
+                streamObserver.onNext(RegistratieResponse.newBuilder().setBevestiging(false).getDefaultInstanceForType());
+                streamObserver.onCompleted();
             }
 
         }
 
         @Override
-        public void receiveMessages(ChatClient ontvanger, StreamObserver<Bericht> streamObserver){
-		    User ontvangerUser= users.get(ontvanger.getNaam());
+        public synchronized void receiveMessages(ChatClient ontvanger, StreamObserver<Bericht> streamObserver){
+            User ontvangerUser= users.get(ontvanger.getNaam());
+		    while(ontvangerUser.getInbox().isEmpty()){
+                try {
+                    wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
             for (Bericht inbox : ontvangerUser.getInbox()) {
                 streamObserver.onNext(inbox);
             }
